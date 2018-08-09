@@ -46,7 +46,7 @@ module Pod
     def remove_demo_project
       app_project = @project.native_targets.find { |target| target.product_type == "com.apple.product-type.application" }
       test_target = @project.native_targets.find { |target| target.product_type == "com.apple.product-type.bundle.unit-test" }
-      test_target.name = @configurator.pod_name + "_Tests"
+      test_target.name = @configurator.pod_name + "-Unit-Tests"
 
       # Remove the implicit dependency on the app
       test_dependency = test_target.dependencies.first

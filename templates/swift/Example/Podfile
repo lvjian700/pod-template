@@ -3,7 +3,7 @@ use_frameworks!
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
 
-  target '${POD_NAME}_Tests' do
+  target '${POD_NAME}-Unit-Tests' do
     inherit! :search_paths
 
     ${INCLUDED_PODS}
